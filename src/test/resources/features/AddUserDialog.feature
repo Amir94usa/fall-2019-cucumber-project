@@ -1,3 +1,4 @@
+@smoke
 Feature: Add new users dialogs
 
   Scenario: PlaceHolder tests

@@ -1,4 +1,4 @@
-@wip
+@wip @smoke
 Feature: Books table
 
   Scenario: Verify search results
