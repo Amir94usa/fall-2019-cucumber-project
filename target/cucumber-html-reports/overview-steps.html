@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>25 Apr 2020, 16:46</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.Hooks.setUpScenario()</td>
+              <td>9</td>
+              <td class="duration" data-value="5369931955">5.369</td>
+              <td class="duration" data-value="5369931955">5.857</td>
+              <td class="duration" data-value="48329387600">48.329</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)</td>
+              <td>9</td>
+              <td class="duration" data-value="707384177">0.707</td>
+              <td class="duration" data-value="707384177">1.091</td>
+              <td class="duration" data-value="6366457600">6.366</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.LoginStepDefs.i_am_on_the_login_page()</td>
+              <td>9</td>
+              <td class="duration" data-value="954350611">0.954</td>
+              <td class="duration" data-value="954350611">2.060</td>
+              <td class="duration" data-value="8589155500">8.589</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.LoginStepDefs.i_login_as_a_admin_user()</td>
+              <td>9</td>
+              <td class="duration" data-value="301153944">0.301</td>
+              <td class="duration" data-value="301153944">0.355</td>
+              <td class="duration" data-value="2710385500">2.710</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigation.i_click_on_link(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="2086959855">2.086</td>
+              <td class="duration" data-value="2086959855">2.131</td>
+              <td class="duration" data-value="18782638700">18.782</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigation.i_select_Show_records(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="328120600">0.328</td>
+              <td class="duration" data-value="328120600">0.328</td>
+              <td class="duration" data-value="328120600">0.328</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigation.show_records_default_value_should_be(java.lang.Integer)</td>
+              <td>6</td>
+              <td class="duration" data-value="148305933">0.148</td>
+              <td class="duration" data-value="148305933">0.308</td>
+              <td class="duration" data-value="889835600">0.889</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigation.show_records_should_have_following_options(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="128756800">0.128</td>
+              <td class="duration" data-value="128756800">0.128</td>
+              <td class="duration" data-value="128756800">0.128</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.PageNavigation.the_users_table_must_display_records(java.lang.Integer)</td>
+              <td>6</td>
+              <td class="duration" data-value="1018872183">1.018</td>
+              <td class="duration" data-value="1018872183">1.033</td>
+              <td class="duration" data-value="6113233100">6.113</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.UserGroupHomework.i_select_Show_records(java.lang.Integer)</td>
+              <td>5</td>
+              <td class="duration" data-value="236010060">0.236</td>
+              <td class="duration" data-value="236010060">0.297</td>
+              <td class="duration" data-value="1180050300">1.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.UserTableStepDefs.i_search_for(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="835205600">0.835</td>
+              <td class="duration" data-value="835205600">0.835</td>
+              <td class="duration" data-value="835205600">0.835</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.UserTableStepDefs.table_should_contain_row_with(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1773260600">1.773</td>
+              <td class="duration" data-value="1773260600">1.773</td>
+              <td class="duration" data-value="1773260600">1.773</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cybertek.library.step_definitions.UserTableStepDefs.table_should_have_following_columns_names(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="257301400">0.257</td>
+              <td class="duration" data-value="257301400">0.257</td>
+              <td class="duration" data-value="257301400">0.257</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>13</td>
+            <td>67</td>
+            <td class="duration">1.437</td>
+            <td class="duration">48.329</td>
+            <td class="duration">1:36.283</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
