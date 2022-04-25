@@ -31,7 +31,7 @@ public class UserTableHwSteps {
 
     @When("I search for any invalid email")
     public void i_search_for_any_invalid_email() {
-        userPage.search.sendKeys(faker.name().fullName() + faker.number().digit() + ".com");
+    //    userPage.search.sendKeys(faker.name().fullName() + faker.number().digit() + ".com");
 fghfgh
     }
 
